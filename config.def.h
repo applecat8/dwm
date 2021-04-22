@@ -5,13 +5,13 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=12" };
-static const char dmenufont[]       = "monospace:size=12";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+static const char *fonts[]          = { "monospace:size=15" };
+static const char dmenufont[]       = "monospace:size=15";
+static const char col_gray1[]       = "#7f8c8d";
+static const char col_gray2[]       = "#7f8c8d";
+static const char col_gray3[]       = "#ffffff";
+static const char col_gray4[]       = "#ffffff";
+static const char col_cyan[]        = "#283747";
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
@@ -70,7 +70,8 @@ static const char *volup[] = { "amixer", "-qM", "set", "Master", "2%+", "umute",
 static const char *voldown[] = { "amixer", "-qM", "set", "Master", "2%-", "umute", NULL };   
 static const char *mute[] = { "amixer", "-qM", "set", "Master", "toggle", NULL };   
 static const char *lightup[] = { "xbacklight", "-inc", "10", NULL };
-static const char *lightdown[] = { "xbacklight", "-dec", "10", NULL };   
+static const char *lightdown[] = { "xbacklight", "-dec", "10", NULL }; 
+static const char *screenshots[] = { "scrot", "-s", NULL };   
 
 
 static Key keys[] = {
@@ -80,6 +81,7 @@ static Key keys[] = {
     { MODKEY|ShiftMask,             XK_Right,  spawn,          {.v = volup } },
     { MODKEY|ShiftMask,             XK_Left,   spawn,          {.v = voldown } },
     { MODKEY|ShiftMask,             XK_m,      spawn,          {.v = mute } },
+	{ MODKEY,                       XK_w,      spawn,          {.v = screenshots } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
