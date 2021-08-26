@@ -12,9 +12,9 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=14", "Noto Sans CJK SC:size=14" };
 static const char dmenufont[]       =  "monospace:size=14";
-static const char col_gray1[]       = "#7f8c8d";
-static const char col_gray2[]       = "#7f8c8d";
-static const char col_gray3[]       = "#ffffff";
+static const char col_gray1[]       = "#FFEBCD";
+static const char col_gray2[]       = "#ffffff";
+static const char col_gray3[]       = "#3CB371";
 static const char col_gray4[]       = "#ffffff";
 static const char col_cyan[]        = "#3CB371";
 static const unsigned int baralpha = 0xd0;
